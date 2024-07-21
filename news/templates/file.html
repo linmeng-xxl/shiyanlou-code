@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{{ d.title }}</h1>
+    <h2>{{ d.created_time }}</h2>
+{% endblock %}
+
+{% block content %}
+    {% for t in d.content.split('\\n') %}
+        <p>{{ t }}</p>
+    {% endfor %}
+{% endblock %}
+
