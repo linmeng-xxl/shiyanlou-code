@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block content %}
-    {% for title in titles %}
-        <p>{{ title }}</p>
+    {% for file in files %}
+        <a href="{{ url_for('file', file_id=file.id }}">{{ file.title }}</a>
     {% endfor %}
 {% endblock %}
 

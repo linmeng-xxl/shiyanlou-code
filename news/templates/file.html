@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 
 {% block header %}
-    <h1>{{ d.title }}</h1>
-    <h2>{{ d.created_time }}</h2>
+    <h1>{{ file.title }}</h1>
+    <h2>{{ file.created_time }}</h2>
+    <h3>{{ category_name }}</h3>
 {% endblock %}
 
 {% block content %}
-    {% for t in d.content.split('\\n') %}
+    {% for t in file.content %}
         <p>{{ t }}</p>
     {% endfor %}
 {% endblock %}
